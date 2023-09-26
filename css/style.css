@@ -1,0 +1,181 @@
+:root{
+    --Light-red:hsl(0, 100%, 67%);
+    --Orangey-yellow:hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --transparent-red:hsla(0, 100%, 67% ,0.2);
+    --transparent-yellow:hsla(39, 100%, 56% ,0.2);
+    --transparent-teal:hsla(166, 100%, 37% ,0.2);
+    --transparent-blue:hsla(234, 85%, 45% ,0.2);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue : hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+    font-family:'HankenGrotesk' ;
+    src: url(../assets//fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+
+
+*{
+    font-family:'HankenGrotesk' ;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.container{
+    margin: auto;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--White);
+    box-shadow: 2px 4px 8px 0px rgba(90, 89, 89, 0.5);
+    margin: auto;
+    border-radius: 30px;
+    width:1000px ;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to bottom ,var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 30px;
+    width: 50%;
+}
+.result h3{
+    color:var(--Light-lavender)
+}
+.result span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--Violet-blue) , var(--Persian-blue));
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.result span h4{    
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--White);
+    margin: 0;
+}
+.result span small{
+    color: var(--Light-lavender);
+}
+.result h5{
+    color: var(--White);
+    font-size: 30px;
+    margin-top:30px;
+    margin-bottom: 0;
+}
+.result p{
+    font-size: 18px;
+    text-align: center;
+    color: var(--Light-lavender);
+    width: 50%;
+    word-break: keep-all;
+}
+.summary{
+    width: 50%;
+}
+.summary h2{
+    margin-left: 20px;
+}
+.summary .reaction , .memory , .verbal ,.visual{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.reaction{
+    background-color: var(--transparent-red);
+}
+.memory{
+    background-color: var(--transparent-yellow);
+
+}
+.verbal {
+    background-color: var(--transparent-teal)
+}
+.visual{
+    background-color: var(--transparent-blue);
+}
+.summary .reaction div , .memory div, .verbal div,.visual div {
+    display: flex;
+}
+.summary .reaction p , .memory p, .verbal p,.visual p{
+    margin-left: 10px;
+}
+.reaction div p{
+    color: var(--Light-red);
+}  
+.memory div p{
+    color: var(--Orangey-yellow);
+} 
+.verbal div p{
+    color: var(--Green-teal);
+}
+.visual div p{
+    color: var(--Cobalt-blue);
+}
+.summary .reaction p span, .memory p span, .verbal p span,.visual p span{
+    color: var(--Dark-gray-blue);
+}
+.btn-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+.btn-primary{
+    background:linear-gradient(to bottom ,var(--Light-slate-blue), var(--Light-royal-blue));
+    width: 50%;
+    margin: 15px;
+    border-radius: 100vh;
+    color: var(--White);
+    transition: background 3s;
+}
+.btn-primary:hover{
+    background:linear-gradient(to bottom ,var(--Dark-gray-blue),var(--Dark-gray-blue));
+
+}
+@media  (max-width:768px){
+    .content{
+        flex-direction: column;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+    .result{
+        width: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .summary{
+        width: 100%;
+    }
+}
